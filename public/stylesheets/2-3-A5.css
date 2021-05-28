@@ -1,0 +1,29 @@
+* {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto !important;
+}
+
+.form-title {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.person {
+  height: 350px;
+}
+
+.img-label {
+  height: 280px;
+}
+
+img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}

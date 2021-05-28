@@ -1,0 +1,26 @@
+<div class="main">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">幹話產生器</span>
+    </div>
+  </nav>
+  <form action="/" method="post">
+    <h2 class="form-title">你想對誰說幹話?</h2>
+    <div class="row">
+      {{#each roles}}
+      <div class="col-4 person">
+        <label for="{{this.title}}" class="select-label col-form-label img-label">
+          <img class="w-100" src="{{this.photo}}" alt="">
+        </label>
+        <div class="form-check d-flex align-items-center justify-content-center">
+          <input type="radio" class="form-check-input" id="{{this.title}}" name="ghg" value="{{this.id}}" {{checkStatus checkValue this.id}}>
+          <label class="form-check-label ms-2" for="{{this.title}}">{{this.title}}</label>
+        </div>
+      </div>
+      {{/each}}
+    <div class="bottom row align-items-center">
+      <button type="submit" class="btn btn-primary col-3">產生幹話</button>
+      {{>ganhwa}}
+    </div>
+  </form>
+</div>
